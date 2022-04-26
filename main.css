@@ -79,6 +79,10 @@ body {
     padding: 1.5rem 2rem;
     border-radius: .5rem;
     color: white;
+    transition: all .3s;
+}
+.card:hover{
+    filter: brightness(1.2);
 }
 
 .card:nth-child(3), .card:last-child {
