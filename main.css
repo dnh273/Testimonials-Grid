@@ -1,0 +1,162 @@
+/* FONT GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* VARIABLES */
+:root {
+    /* COLOR */
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    /* FONT WEIGHT */
+    --fs-medium: 500;
+    --fs-semibold: 600;
+}
+
+/* GLOBALS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 6rem;
+    background-color: var(--Light-grayish-blue);
+}
+
+/* CARD */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.bg-pattern {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 3rem;
+}
+
+.card-purpose {
+    grid-area: 1 / 1 / 2 / 3;
+    background-color: var(--Moderate-violet);
+    z-index: 1;
+    position: relative;
+}
+
+.card-gray {
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.card-white {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: var(--White);
+}
+
+.card-black {
+    grid-area: 2 / 2 / 3 / 4;
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.card-white-side {
+    grid-area: 1 / 4 / 3 / 5;
+    background-color: var(--White);
+}
+
+.card {
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    color: white;
+}
+
+.card:nth-child(3), .card:last-child {
+    color: black;
+}
+
+.card-avatar {
+    display: flex;
+    align-items: center;
+}
+
+.card-avatar img {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
+
+.card-name {
+    display: flex;
+    font-size: .7rem;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.name {
+    font-weight: var(--fs-semibold);
+}
+
+.card-subtitle {
+    opacity: 50%;
+}
+
+/* TESTIMONIAL */
+.testimonial-title {
+    padding-top: 1rem;
+    font-size: 1.28rem;
+}
+
+
+.quotes {
+    margin-top: 1.5rem;
+    opacity: 50%;
+    font-weight: var(--fs-medium);
+    font-size: .9rem;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:1200px) {
+    body {
+
+        padding: 2rem 2rem;
+    }
+
+    .card-container {
+        align-items: normal;
+        row-gap: 1rem;
+    }
+
+}
+
+@media screen and (max-width:992px) {
+    body {
+        padding: 1rem;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    .testimonial-title {
+        font-size: 1.5rem;
+
+    }
+
+    .quotes {
+        font-size: 1rem;
+    }
+}
